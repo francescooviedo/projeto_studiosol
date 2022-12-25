@@ -4,7 +4,7 @@
   "description": "Teste de habilidade \"senha valida\" studio sol",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/**/*.test.js --exit",
     "start": "node .",
     "dev": "nodemon -L .",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
@@ -24,8 +24,11 @@
     "express": "4.17.1"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
     "eslint": "6.8.0",
-    "eslint-config-trybe-backend": "1.0.1",
+    "eslint-config-trybe-backend": "^1.0.3",
+    "mocha": "^10.2.0",
     "nodemon": "2.0.15"
   }
 }
