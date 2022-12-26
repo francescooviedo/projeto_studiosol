@@ -44,4 +44,4 @@ const passwordVerifyService = (payload) => {
    return verificationObj;
 };
   
-module.exports = { passwordVerifyService, passwordPatternRules: passwordDictionaryRules };
+module.exports = { passwordVerifyService, passwordDictionaryRules };

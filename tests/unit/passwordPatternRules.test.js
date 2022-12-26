@@ -1,47 +1,47 @@
 const chai = require('chai');
-const { passwordPatternRules } = require('../../src/services/passwordService');
+const { passwordDictionaryRules } = require('../../src/services/passwordService');
 
 const { expect } = chai;
 
-describe('2 - object passwordPatternRules', function () {
+describe('2 - object passwordDictionaryRules', function () {
     it('minimum password size', function () {
-        const resultTrue = passwordPatternRules.minSize('aa', 2);
-        const resultFalse = passwordPatternRules.minSize('a', 2);
+        const resultTrue = passwordDictionaryRules.minSize('aa', 2);
+        const resultFalse = passwordDictionaryRules.minSize('a', 2);
 
         expect(resultTrue).to.be.equal(true);
         expect(resultFalse).to.be.equal(false);
     });
     it('minimum Uppercase characters', function () {
-        const resultTrue = passwordPatternRules.minUppercase('UU', 2);
-        const resultFalse = passwordPatternRules.minUppercase('U', 2);
+        const resultTrue = passwordDictionaryRules.minUppercase('UU', 2);
+        const resultFalse = passwordDictionaryRules.minUppercase('U', 2);
 
         expect(resultTrue).to.be.equal(true);
         expect(resultFalse).to.be.equal(false);
     });
     it('minimum lowercase characters', function () {
-        const resultTrue = passwordPatternRules.minLowercase('aa', 2);
-        const resultFalse = passwordPatternRules.minLowercase('A', 2);
+        const resultTrue = passwordDictionaryRules.minLowercase('aa', 2);
+        const resultFalse = passwordDictionaryRules.minLowercase('A', 2);
 
         expect(resultTrue).to.be.equal(true);
         expect(resultFalse).to.be.equal(false);
     });
     it('minimum Digits', function () {
-        const resultTrue = passwordPatternRules.minDigit('12', 2);
-        const resultFalse = passwordPatternRules.minDigit('1', 2);
+        const resultTrue = passwordDictionaryRules.minDigit('12', 2);
+        const resultFalse = passwordDictionaryRules.minDigit('1', 2);
 
         expect(resultTrue).to.be.equal(true);
         expect(resultFalse).to.be.equal(false);
     });
     it('minimum Special characters', function () {
-        const resultTrue = passwordPatternRules.minSpecialChars('@@', 2);
-        const resultFalse = passwordPatternRules.minSpecialChars('@', 2);
+        const resultTrue = passwordDictionaryRules.minSpecialChars('@@', 2);
+        const resultFalse = passwordDictionaryRules.minSpecialChars('@', 2);
 
         expect(resultTrue).to.be.equal(true);
         expect(resultFalse).to.be.equal(false);
     });
     it('minimum character repetition', function () {
-        const resultTrue = passwordPatternRules.noRepeted('abc', 0);
-        const resultFalse = passwordPatternRules.noRepeted('aaa', 0);
+        const resultTrue = passwordDictionaryRules.noRepeted('abc', 0);
+        const resultFalse = passwordDictionaryRules.noRepeted('aaa', 0);
 
         expect(resultTrue).to.be.equal(true);
         expect(resultFalse).to.be.equal(false);
