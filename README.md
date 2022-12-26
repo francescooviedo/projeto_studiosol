@@ -25,7 +25,9 @@ no campo `verify` e quais regras não foram seguidas no campo `noMatch`.
 <p align="left"> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://mochajs.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg" alt="mocha" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </p>
 
 
-## Inicialização do projeto via Docker
+## Inicialização do projeto 
+
+### Via Docker
 
 Garanta que o docker esteja instalado na sua máquina.
 
@@ -41,7 +43,7 @@ Rode os seguintes comandos para clonar o projeto, entrar em sua pasta, construir
  docker run -p 8080:8080 -d --name studiosol projeto_studiosol     
 ```
 
-## Inicialização local
+### Localmente
 
 Rode os seguintes comandos para clonar o projeto, entrar em sua pasta, instalar as dependências e inicializar a aplicação: 
 
@@ -56,13 +58,15 @@ Rode os seguintes comandos para clonar o projeto, entrar em sua pasta, instalar 
 ```
 ## Rodando os testes
 
+### Via Docker
+
 Para rodar os testes dentro do container, rode o seguinte comando
 
 ```bash
 docker exec -it studiosol npm test    
 ```
 
-## Rodando os testes localmente
+### Localmente
 
 Garanta que as dependências do projeto estejam instaladas e rode o seguinte comando:
 
