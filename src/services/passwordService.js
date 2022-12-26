@@ -1,4 +1,4 @@
-const passwordPatternRules = {
+const passwordDictionaryRules = {
   minSize(password, value) {
     return password.length >= value;
   },
@@ -34,7 +34,7 @@ const passwordVerifyService = (payload) => {
   
   if (Array.isArray(payload.rules)) {
     payload.rules.forEach((element) => {
-      const validate = passwordPatternRules[element.rule](payload.password, element.value);
+      const validate = passwordDictionaryRules[element.rule](payload.password, element.value);
         if (!validate) {
           verificationObj.verify = false;
           verificationObj.noMatch.push(element.rule);
@@ -42,6 +42,6 @@ const passwordVerifyService = (payload) => {
       });
   }
    return verificationObj;
-  };
+};
   
-  module.exports = { passwordVerifyService, passwordPatternRules };
+module.exports = { passwordVerifyService, passwordPatternRules: passwordDictionaryRules };

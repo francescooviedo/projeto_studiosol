@@ -1,4 +1,4 @@
-const { passwordVerifyService } = require('../service/password');
+const { passwordVerifyService } = require('../services/passwordService');
 
 const passwordController = (req, res) => {
     try {

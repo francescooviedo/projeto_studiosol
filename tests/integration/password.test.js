@@ -29,7 +29,7 @@ describe('1 - Validation request', function () {
         const validBody = {
              password: 'TesteSenhaForte!1234&',
              rules: [
-             { rule: 'minSize1', value: 8 },
+             { rule: 'nonExistentRule', value: 8 },
              ],
          };
      const response = await chai

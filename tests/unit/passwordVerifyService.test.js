@@ -1,5 +1,5 @@
 const chai = require('chai');
-const { passwordVerifyService } = require('../../src/service/password');
+const { passwordVerifyService } = require('../../src/services/passwordService');
 
 const { expect } = chai;
 
